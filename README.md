@@ -1,4 +1,4 @@
-# bloom-filter
+# Code Challenge: Kata05 Bloom-Filters
 
 This is my result of the code challenge defined here:
 http://codekata.com/kata/kata05-bloom-filters/
@@ -14,3 +14,9 @@ npm i
 ```
 node index.js
 ```
+
+## Test wordlist
+```
+node testWordList.js  
+```
+
