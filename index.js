@@ -36,7 +36,7 @@ const checkUserInput = () => {
 console.log(`Loading ${wordListFile}...`)
 BloomFilter.load(wordListFilePath).then(numWords => {
   console.log(`Finished loading ${numWords}`)
-  console.log(`Enter ".${quitString}" or hit CTRL-C to end checking`)
+  console.log(`Enter "${quitString}" or hit CTRL-C to end checking`)
   checkUserInput()
 
 })
