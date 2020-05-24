@@ -13,7 +13,7 @@ bf.getWordListArray(wordListFile).then(checkWordList => {
   bf.load(wordListFilePath).then(() => {
     try {
       checkWordList.forEach(checkWord => {
-        assert.ok(bf.hasWord(checkWord, `Word ${checkWord} is not part of the wordList`))
+        assert.ok(bf.hasWord(checkWord), `Word ${checkWord} is not part of the wordList`)
       })
     } catch (e) {
       console.log(e.message)
