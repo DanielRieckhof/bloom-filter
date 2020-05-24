@@ -23,7 +23,7 @@ const checkUserInput = () => {
       rl.close()
     }
 
-    if (BloomFilter.hasWord(word)) {
+    if (bf.hasWord(word)) {
       console.log(`${word} is spelled correctly`)
     } else {
       console.log(`${word} is misspelled`)
@@ -33,10 +33,12 @@ const checkUserInput = () => {
   })
 }
 
+
+const bf = new BloomFilter(5)
+
 console.log(`Loading ${wordListFile}...`)
-BloomFilter.load(wordListFilePath).then(numWords => {
-  console.log(`Finished loading ${numWords}`)
+bf.load(wordListFilePath).then(numWords => {
+  console.log(`Finished loading ${numWords} words (mapped to ${bf.countHashedWords()} hashes)`)
   console.log(`Enter "${quitString}" or hit CTRL-C to end checking`)
   checkUserInput()
-
 })
