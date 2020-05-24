@@ -15,6 +15,11 @@ npm i
 node index.js
 ```
 
+## Test randomWorldList
+```
+node testRandomWordList.js
+```
+
 ## Test wordlist
 ```
 node testWordList.js  
